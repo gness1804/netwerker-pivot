@@ -1,0 +1,12 @@
+$debug: false;
+
+$debug-border-style: 1px dotted red;
+$debug-background-color: magenta;
+
+@if ($debug) {
+
+  .contact-card-container{
+    border: $debug-border-style
+  }
+
+}

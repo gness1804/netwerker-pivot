@@ -1,0 +1,39 @@
+@import "variables.scss";
+
+.input-field-container{
+  position: relative;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.input-field{
+  width: 275px;
+  font-size: 18px;
+  display: block;
+  margin: 5px 5px 15px 5px;
+  border: none;
+  border-bottom: 1px dotted black ;
+}
+
+textarea{
+  width: 300px;
+  height: 120px;
+}
+
+.form-container{
+  display: inline-block;
+}
+
+.add-image-wrapper{
+  vertical-align: top;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 20px;
+	margin-top: 20px;
+  width: 200px;
+  img{
+    border-radius: 150px;
+    width: 200px;
+  }
+}

@@ -1,0 +1,151 @@
+@import "variables.scss";
+
+@mixin button-standard {
+  color: white;
+  border-radius: 5px;
+  border: none;
+  font-weight: normal;
+  font-size: 20px;
+  padding: 10px;
+  width: 120px;
+}
+
+@mixin button-standard-hover {
+  cursor: pointer;
+}
+
+@mixin add-contact-button {
+  position: absolute;
+  right: 60px;
+  top: 15px;
+  float: right;
+  background-color: white;
+  border-radius: 15px;
+  border: none;
+}
+
+.add-contact-img {
+  width: $contact-img-width;
+}
+
+.add-contact-img-hover {
+  cursor: pointer;
+  width: $contact-img-width;
+}
+
+.auth-button {
+	@include button-standard;
+	float: left;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+.signed-in {
+  background-color: $red;
+		&:hover {
+		  cursor: pointer;
+			background-color: darken($red, 5%)
+		}
+}
+
+.signed-out {
+  background-color: $green;
+		&:hover {
+			cursor: pointer;
+			background-color: darken($green, 5%)
+		}
+}
+
+.add-contact-button {
+  @include add-contact-button;
+  outline: none;
+  img {
+    &:last-child {
+      display: none;
+    }
+  }
+
+  &:hover {
+    img:first-child {
+      display: none;
+    }
+    img:last-child {
+      display: inline-block;
+    }
+  }
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(45deg);}
+}
+
+.add-button-exit{
+    outline: none;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    &:hover {
+		  cursor: pointer;
+      animation-name: rotate;
+      animation-duration: 0s;
+      img:first-child {
+        display: none;
+      }
+      img:last-child {
+        display: inline-block;
+      }
+    }
+}
+
+.submit-new-contact-button {
+	@include button-standard
+	background-color: $blue;
+	width: 300px;
+  display: block;
+  margin: 20px auto 20px auto;
+
+	&:hover{
+  cursor: pointer;
+	background-color: darken($blue, 5%)
+	}
+}
+
+.delete-contact {
+  @include button-standard;
+  background-color: $red;
+  width: 200px;
+
+  &:hover {
+    cursor: pointer;
+    background-color: darken($red, 5%);
+  }
+}
+
+.show-followup-list-button {
+  cursor: pointer;
+  margin-left: 10px;
+  right: 30px;
+  width: 40px;
+}
+
+.contact-card-top-buttons-container {
+	position: absolute;
+	right: 10px;
+	img {
+		cursor: pointer;
+		height: 30px;
+		margin: 0 5px;
+		width: 30px;
+	}
+}
+
+
+.add-image-button{
+	display: none;
+}
+
+
+.flagged-for-followup-button, .not-flagged-for-followup-button {
+	cursor: pointer;
+}

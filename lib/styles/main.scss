@@ -1,0 +1,61 @@
+@import "buttons.scss";
+@import "forms.scss";
+@import "contactCard.scss";
+@import "debug.scss";
+@import "variables.scss";
+
+@mixin h1-style-desktop {
+  color: $blue;
+  font-size: 50px;
+  margin: auto;
+  text-align: center;
+  padding: 15px 0;
+}
+
+html {
+  font-family:  $font;
+  color: $gray;
+}
+
+header{
+  background: $header-background;
+  border-bottom: 3px solid $lightgray;
+  height: 115px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  @include h1-style-desktop;
+}
+
+
+.greeting{
+  color: $blue;
+}
+
+.active-user {
+  text-align: center;
+    span {
+      font-size: 22px;
+      font-style: italic;
+      font-weight: normal;
+    }
+}
+
+.follow-up-label{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  float: right;
+}
+
+.search {
+  display: block;
+  text-align: center;
+  font-size: 25px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+@import "mobile.scss";

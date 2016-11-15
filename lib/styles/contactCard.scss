@@ -1,0 +1,77 @@
+@import "variables.scss";
+
+.contact-Container{
+  background-color: white;
+  position: relative;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+
+  .contact-card-for-each-contact {
+    background-color: white;
+    position: relative;
+    border: 2px solid $contact-card-border;
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px 5px 0px 0px;
+    padding: 10px;
+  }
+
+  .empty-card {
+    position: relative;
+    background-color: white;
+    height: 300px;
+    z-index: 99;
+  }
+
+
+
+  @keyframes expand {
+      from {height: 40px}
+      to {height: 350px;}
+  }
+
+  @keyframes contract {
+      from {height: 350px}
+      to {height: 40px;}
+  }
+
+  .contracted {
+    animation-name: contract;
+    animation-duration: .5s;
+    height: 40px;
+    z-index: 99;
+  }
+
+  .contact-card-for-each-contact .expanded {
+    animation-name: expand;
+    animation-duration: 1s;
+    z-index: 1;
+    div{
+      margin-bottom: 8px;
+    }
+    height: auto;
+    text-align: left;
+  }
+
+  .invert{
+    transform: rotate(180deg);
+  }
+
+  .label {
+    color: $text-label;
+    font-weight: 300;
+  }
+
+  .image{
+    top: 100px;
+    right: 60px;
+    position: absolute;
+    width: 220px;
+  }
+}
+
+.fullname {
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
