@@ -28952,7 +28952,10 @@
 	                _react2.default.createElement(
 	                  'span',
 	                  { className: 'bold' },
-	                  user.displayName
+	                  user.displayName,
+	                  ' \xA0 (',
+	                  user.email,
+	                  ')'
 	                )
 	              ),
 	              _react2.default.createElement(
@@ -46718,7 +46721,7 @@
 /* 472 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 	
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -46732,11 +46735,11 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var config = {
-	  apiKey: 'AIzaSyCqaRl8nsYn8BdKwBjZenuS5ExlIxjzL5U',
-	  authDomain: 'netwerker-3d622.firebaseapp.com',
-	  databaseURL: 'https://netwerker-3d622.firebaseio.com',
-	  storageBucket: 'netwerker-3d622.appspot.com',
-	  messagingSenderId: '928047933429'
+	  apiKey: "AIzaSyDGMS-cUaU-AnIOZpvC8THxGtqxUHzPh3s",
+	  authDomain: "netwerker-pivot.firebaseapp.com",
+	  databaseURL: "https://netwerker-pivot.firebaseio.com",
+	  storageBucket: "netwerker-pivot.appspot.com",
+	  messagingSenderId: "114872063042"
 	};
 	
 	_firebase2.default.initializeApp(config);
@@ -47471,6 +47474,7 @@
 	        lastName: _this.state.lastName,
 	        companyName: _this.state.companyName,
 	        title: _this.state.title,
+	        city: _this.state.city,
 	        website: _this.state.website,
 	        numbers: {
 	          cell: _this.state.numbers.cell,
@@ -47546,6 +47550,15 @@
 	            handleChange: _this.updateState,
 	            name: 'title',
 	            'aria-label': 'title'
+	          }),
+	          _react2.default.createElement(_InputField2.default, {
+	            className: 'city-Input input-field',
+	            value: _this.state.city,
+	            placeholder: 'City',
+	            type: 'text',
+	            handleChange: _this.updateState,
+	            name: 'city',
+	            'aria-label': 'city'
 	          }),
 	          _react2.default.createElement(_InputField2.default, {
 	            className: 'website-Input input-field',
@@ -47710,6 +47723,7 @@
 	      lastName: _this.props.lastName || '',
 	      companyName: _this.props.companyName || '',
 	      title: _this.props.title || '',
+	      city: _this.props.city || '',
 	      website: _this.props.website || '',
 	      numbers: {
 	        cell: _this.props.numbers.cell || '',
@@ -47902,7 +47916,7 @@
 	          'Show:',
 	          _react2.default.createElement('img', {
 	            alt: 'mark as follow up',
-	            src: '../images/black-flag.svg',
+	            src: '../images/empty-checkbox.svg',
 	            className: 'show-followup-list-button',
 	            onClick: function onClick() {
 	              _this2.setState({
@@ -48034,6 +48048,7 @@
 	          lastName = _props.lastName,
 	          companyName = _props.companyName,
 	          title = _props.title,
+	          city = _props.city,
 	          website = _props.website,
 	          numbers = _props.numbers,
 	          emails = _props.emails,
@@ -48094,6 +48109,16 @@
 	              'Title: '
 	            ),
 	            title
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'city', 'aria-label': 'city' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'label' },
+	              'City: '
+	            ),
+	            city
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -48171,9 +48196,9 @@
 	            null,
 	            'No Twitter listed for this contct.'
 	          ),
-	          socialMedia.linkedin ? _react2.default.createElement(
+	          socialMedia.linkedIn ? _react2.default.createElement(
 	            'a',
-	            { className: 'linkedin soc-media-link', href: socialMedia.linkedin },
+	            { className: 'linkedIn soc-media-link', href: socialMedia.linkedIn },
 	            _react2.default.createElement(
 	              'span',
 	              { className: 'label' },
@@ -48272,15 +48297,15 @@
 	          'div',
 	          { className: 'contact-card-top-buttons-container' },
 	          followup ? _react2.default.createElement('img', {
-	            src: '../images/yellow-flag-2.svg',
-	            alt: '',
+	            src: '../images/empty-checkbox.svg',
+	            alt: 'An empty checkbox',
 	            className: 'flagged-for-followup-button',
 	            onClick: function onClick() {
 	              return _this2.toggleFollowup();
 	            }
 	          }) : _react2.default.createElement('img', {
-	            src: '../images/gray-flag.svg',
-	            alt: '',
+	            src: '../images/checked-checkbox.png',
+	            alt: 'A checked checkbox.',
 	            className: 'not-flagged-for-followup-button',
 	            onClick: function onClick() {
 	              return _this2.toggleFollowup();
