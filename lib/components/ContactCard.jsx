@@ -12,6 +12,7 @@ export default class ContactCard extends Component {
       contactImgURL: null,
     };
   }
+
   getContactImageURL = () => {
     this.props.imgStorage.child(
                     `${this.props.user.uid}/${this.props.contactImgID}.jpg`)
@@ -50,7 +51,7 @@ export default class ContactCard extends Component {
     }
   }
   render() {
-    const { firstName, lastName, companyName, title, website, numbers, emails,
+    const { firstName, lastName, companyName, title, city, website, numbers, emails,
           socialMedia, notes, followup, groups,
         } = this.props;
     let display;
@@ -74,6 +75,10 @@ export default class ContactCard extends Component {
         <div className="title" aria-label="title">
           <span className="label">Title: </span>
           {title}
+        </div>
+        <div className="city" aria-label="city">
+          <span className="label">City: </span>
+          {city}
         </div>
         <div className = "cell" aria-label="cell">
           <span className="label">Cell Number: </span>

@@ -10,6 +10,7 @@ export default class NewContactForm extends Component {
       lastName: this.props.lastName || '',
       companyName: this.props.companyName || '',
       title: this.props.title || '',
+      city: this.props.city || '',
       website: this.props.website || '',
       numbers: {
         cell: this.props.numbers.cell || '',
@@ -76,6 +77,7 @@ export default class NewContactForm extends Component {
       lastName: this.state.lastName,
       companyName: this.state.companyName,
       title: this.state.title,
+      city: this.state.city,
       website: this.state.website,
       numbers: {
         cell: this.state.numbers.cell,
@@ -148,6 +150,15 @@ export default class NewContactForm extends Component {
             handleChange = {this.updateState}
             name = "title"
             aria-label = "title"
+          />
+          <InputField
+            className = "city-Input input-field"
+            value = {this.state.city}
+            placeholder = "City"
+            type = "text"
+            handleChange = {this.updateState}
+            name = "city"
+            aria-label = "city"
           />
           <InputField
             className = "website-Input input-field"
