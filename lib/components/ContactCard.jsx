@@ -95,11 +95,9 @@ export default class ContactCard extends Component {
           <span className="label">Email 2: </span>
           {emails.secondary}
         </div>
-        <div className = "facebook" aria-label="facebook">
-          <span className="label">Facebook: </span>
-          {socialMedia.facebook}
-        </div>
-        <div className = "twitter" aria-label="twitter">
+        {socialMedia.facebook ? <a href={socialMedia.facebook}>Facebook</a> : <div>No Facebook listed for this contct.</div>}
+
+                               <div className = "twitter" aria-label="twitter">
           <span className="label">Twitter: </span>
           {socialMedia.twitter}
         </div>
