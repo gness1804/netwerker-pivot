@@ -48304,7 +48304,7 @@
 	              return _this2.toggleFollowup();
 	            }
 	          }) : _react2.default.createElement('img', {
-	            src: '../images/checked-checkbox.png',
+	            src: '../images/checked-checkbox.svg',
 	            alt: 'A checked checkbox.',
 	            className: 'not-flagged-for-followup-button',
 	            onClick: function onClick() {
