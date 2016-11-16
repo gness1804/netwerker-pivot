@@ -1,15 +1,3 @@
-# fire-bae
-To install the dependencies:
+## Netwerker Pivot 
 
-`npm install`
-
-To fire up a development server:
-
-`npm start`
-
-Once the server is running, you can visit:
-
-http://localhost:8080/webpack-dev-server/ to run your application.
-http://localhost:8080/webpack-dev-server/test.html to run your test suite in the browser.
-
-Make sure to `firebase init` and wireup firebase for your app.
+This is a pivot of my [original Netwerker project](https://github.com/gness1804/netwerker) with Matt Kaufman and Christine Gamble. It will include new features such as links to social media sites and more specific checkboxes indicated whether I have contacted this individual. I am creating this site in order to facilitate my professional networking. 
