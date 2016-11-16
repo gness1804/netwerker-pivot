@@ -118,7 +118,8 @@ class Application extends Component {
               <span className="greeting" title={`Logged in as ${user.email}`}>
                 Hi,&nbsp;
                 <span className="bold">
-                  {user.displayName}
+                  <span className="user-name">{user.displayName}</span>
+                  {user.email}
                 </span>
               </span>
 
