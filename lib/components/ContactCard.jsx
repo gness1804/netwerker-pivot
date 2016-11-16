@@ -149,15 +149,15 @@ export default class ContactCard extends Component {
         <div className="contact-card-top-buttons-container">
           {followup ?
             <img
-              src="../images/yellow-flag-2.svg"
-              alt=""
+              src="../images/empty-checkbox.svg"
+              alt="An empty checkbox"
               className="flagged-for-followup-button"
               onClick={() => this.toggleFollowup()}
             />
             :
               <img
-                src="../images/gray-flag.svg"
-                alt=""
+                src="../images/checked-checkbox.png"
+                alt="A checked checkbox."
                 className="not-flagged-for-followup-button"
                 onClick={() => this.toggleFollowup()}
               />
