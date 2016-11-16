@@ -74,7 +74,7 @@ export default class ContactCardList extends Component {
         <span className="follow-up-label">Show:
         <img
           alt="mark as follow up"
-          src="../images/black-flag.svg"
+          src="../images/empty-checkbox.svg"
           className="show-followup-list-button"
           onClick={() => {
             this.setState({
