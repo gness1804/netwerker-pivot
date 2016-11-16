@@ -96,24 +96,11 @@ export default class ContactCard extends Component {
           {emails.secondary}
         </div>
         {socialMedia.facebook ? <a className="facebook" href={socialMedia.facebook}><span className="label">Facebook</span></a> : <div>No Facebook listed for this contct.</div>}
-
-                               <div className = "twitter" aria-label="twitter">
-          <span className="label">Twitter: </span>
-          {socialMedia.twitter}
-        </div>
-        <div className = "linkedIn" aria-label="linkedIn">
-          <span className="label">LinkedIn: </span>
-          {socialMedia.linkedIn}
-        </div>
-        <div className = "github" aria-label="github">
-          <span className="label">Github: </span>
-          {socialMedia.github}
-        </div>
-        <div className = "instagram" aria-label="instagram">
-          <span className="label">Instagram: </span>
-          {socialMedia.instagram}
-        </div>
-        <div className="notes" aria-label="notes">
+        {socialMedia.twitter ? <a className="twitter" href={socialMedia.twitter}><span className="label">Twitter</span></a> : <div>No Twitter listed for this contct.</div>}
+        {socialMedia.linkedin ? <a className="linkedin" href={socialMedia.linkedin}><span className="label">LinkedIn</span></a> : <div>No LinkedIn listed for this contct.</div>}
+        {socialMedia.github ? <a className="github" href={socialMedia.github}><span className="label">Github</span></a> : <div>No Github listed for this contct.</div>}
+        {socialMedia.instagram ? <a className="instagram" href={socialMedia.instagram}><span className="label">Instagram</span></a> : <div>No Instagram listed for this contct.</div>}
+       <div className="notes" aria-label="notes">
           <span className="label">Notes: </span>
           {notes}
         </div>
