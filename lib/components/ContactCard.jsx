@@ -126,7 +126,8 @@ export default class ContactCard extends Component {
         <div
           className="fullname firstName lastName contracted"
         >
-          {firstName} {lastName}
+          {firstName} {lastName} <br></br>
+          {companyName}
         </div>
       );
     }
