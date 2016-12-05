@@ -47476,6 +47476,7 @@
 	        title: _this.state.title,
 	        city: _this.state.city,
 	        website: _this.state.website,
+	        category: _this.state.category,
 	        numbers: {
 	          cell: _this.state.numbers.cell,
 	          work: _this.state.numbers.work,
@@ -47489,8 +47490,7 @@
 	          facebook: _this.state.socialMedia.facebook,
 	          twitter: _this.state.socialMedia.twitter,
 	          linkedIn: _this.state.socialMedia.linkedIn,
-	          github: _this.state.socialMedia.github,
-	          instagram: _this.state.socialMedia.instagram
+	          github: _this.state.socialMedia.github
 	        },
 	        notes: _this.state.notes,
 	        followup: _this.state.followup,
@@ -47568,6 +47568,15 @@
 	            handleChange: _this.updateState,
 	            name: 'website',
 	            'aria-label': 'website'
+	          }),
+	          _react2.default.createElement(_InputField2.default, {
+	            className: 'category-Input input-field',
+	            value: _this.state.category,
+	            placeholder: 'Category',
+	            type: 'text',
+	            handleChange: _this.updateState,
+	            name: 'category',
+	            'aria-label': 'category'
 	          }),
 	          _react2.default.createElement(_InputField2.default, {
 	            className: 'cellNumber-Input input-field',
@@ -47659,16 +47668,6 @@
 	            name: 'github',
 	            'aria-label': 'github'
 	          }),
-	          _react2.default.createElement(_InputField2.default, {
-	            className: 'instagram-Input input-field',
-	            value: _this.state.socialMedia.instagram,
-	            placeholder: 'Instagram',
-	            type: 'text',
-	            handleChange: _this.updateStateObject,
-	            objName: 'socialMedia',
-	            name: 'instagram',
-	            'aria-label': 'instagram'
-	          }),
 	          _react2.default.createElement(
 	            'textarea',
 	            {
@@ -47725,6 +47724,7 @@
 	      title: _this.props.title || '',
 	      city: _this.props.city || '',
 	      website: _this.props.website || '',
+	      category: _this.props.category || '',
 	      numbers: {
 	        cell: _this.props.numbers.cell || '',
 	        work: _this.props.numbers.work || '',
@@ -47738,8 +47738,7 @@
 	        facebook: _this.props.socialMedia.facebook || '',
 	        twitter: _this.props.socialMedia.twitter || '',
 	        linkedIn: _this.props.socialMedia.linkedIn || '',
-	        github: _this.props.socialMedia.github || '',
-	        instagram: _this.props.socialMedia.instagram || ''
+	        github: _this.props.socialMedia.github || ''
 	      },
 	      notes: _this.props.notes || '',
 	      image: _this.props.image || '',
@@ -48050,12 +48049,12 @@
 	          title = _props.title,
 	          city = _props.city,
 	          website = _props.website,
+	          category = _props.category,
 	          numbers = _props.numbers,
 	          emails = _props.emails,
 	          socialMedia = _props.socialMedia,
 	          notes = _props.notes,
-	          followup = _props.followup,
-	          groups = _props.groups;
+	          followup = _props.followup;
 	
 	      var display = void 0;
 	      var expandButtonClass = void 0;
@@ -48119,6 +48118,16 @@
 	              'City: '
 	            ),
 	            city
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'category', 'aria-label': 'category' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'label' },
+	              'Category: '
+	            ),
+	            category
 	          ),
 	          _react2.default.createElement(
 	            'div',
@@ -48221,19 +48230,6 @@
 	            'div',
 	            null,
 	            'No Github listed for this contact.'
-	          ),
-	          socialMedia.instagram ? _react2.default.createElement(
-	            'a',
-	            { className: 'instagram soc-media-link', href: socialMedia.instagram },
-	            _react2.default.createElement(
-	              'span',
-	              { className: 'label' },
-	              'Instagram'
-	            )
-	          ) : _react2.default.createElement(
-	            'div',
-	            null,
-	            'No Instagram listed for this contact.'
 	          ),
 	          _react2.default.createElement(
 	            'div',
