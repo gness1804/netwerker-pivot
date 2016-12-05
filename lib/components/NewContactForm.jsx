@@ -12,6 +12,7 @@ export default class NewContactForm extends Component {
       title: this.props.title || '',
       city: this.props.city || '',
       website: this.props.website || '',
+      category: this.props.category || '',
       numbers: {
         cell: this.props.numbers.cell || '',
         work: this.props.numbers.work || '',
@@ -26,7 +27,6 @@ export default class NewContactForm extends Component {
         twitter: this.props.socialMedia.twitter || '',
         linkedIn: this.props.socialMedia.linkedIn || '',
         github: this.props.socialMedia.github || '',
-        instagram: this.props.socialMedia.instagram || '',
       },
       notes: this.props.notes || '',
       image: this.props.image || '',
@@ -79,6 +79,7 @@ export default class NewContactForm extends Component {
       title: this.state.title,
       city: this.state.city,
       website: this.state.website,
+      category: this.state.category,
       numbers: {
         cell: this.state.numbers.cell,
         work: this.state.numbers.work,
@@ -93,7 +94,6 @@ export default class NewContactForm extends Component {
         twitter: this.state.socialMedia.twitter,
         linkedIn: this.state.socialMedia.linkedIn,
         github: this.state.socialMedia.github,
-        instagram: this.state.socialMedia.instagram,
       },
       notes: this.state.notes,
       followup: this.state.followup,
@@ -168,6 +168,15 @@ export default class NewContactForm extends Component {
             handleChange = {this.updateState}
             name = "website"
             aria-label="website"
+          />
+          <InputField
+            className = "category-Input input-field"
+            value = {this.state.category}
+            placeholder = "Category"
+            type = "text"
+            handleChange = {this.updateState}
+            name = "category"
+            aria-label="category"
           />
           <InputField
             className = "cellNumber-Input input-field"
@@ -258,16 +267,6 @@ export default class NewContactForm extends Component {
             objName = "socialMedia"
             name = "github"
             aria-label="github"
-          />
-          <InputField
-            className = "instagram-Input input-field"
-            value = {this.state.socialMedia.instagram}
-            placeholder = "Instagram"
-            type = "text"
-            handleChange={this.updateStateObject}
-            objName = "socialMedia"
-            name = "instagram"
-            aria-label="instagram"
           />
           <textarea
             className = "notes-input input-field"
