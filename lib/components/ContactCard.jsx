@@ -100,11 +100,11 @@ export default class ContactCard extends Component {
           <span className="label">Email 2: </span>
           {emails.secondary}
         </div>
-        {socialMedia.facebook ? <a className="facebook soc-media-link" href={socialMedia.facebook}><span className="label">Facebook</span></a> : <div>No Facebook listed for this contct.</div>}
-        {socialMedia.twitter ? <a className="twitter soc-media-link" href={socialMedia.twitter}><span className="label">Twitter</span></a> : <div>No Twitter listed for this contct.</div>}
-        {socialMedia.linkedIn? <a className="linkedIn soc-media-link" href={socialMedia.linkedIn}><span className="label">LinkedIn</span></a> : <div>No LinkedIn listed for this contct.</div>}
-        {socialMedia.github ? <a className="github soc-media-link" href={socialMedia.github}><span className="label">Github</span></a> : <div>No Github listed for this contct.</div>}
-        {socialMedia.instagram ? <a className="instagram soc-media-link" href={socialMedia.instagram}><span className="label">Instagram</span></a> : <div>No Instagram listed for this contct.</div>}
+        {socialMedia.facebook ? <a className="facebook soc-media-link" href={socialMedia.facebook}><span className="label">Facebook</span></a> : <div>No Facebook listed for this contact.</div>}
+        {socialMedia.twitter ? <a className="twitter soc-media-link" href={socialMedia.twitter}><span className="label">Twitter</span></a> : <div>No Twitter listed for this contact.</div>}
+        {socialMedia.linkedIn? <a className="linkedIn soc-media-link" href={socialMedia.linkedIn}><span className="label">LinkedIn</span></a> : <div>No LinkedIn listed for this contact.</div>}
+        {socialMedia.github ? <a className="github soc-media-link" href={socialMedia.github}><span className="label">Github</span></a> : <div>No Github listed for this contact.</div>}
+        {socialMedia.instagram ? <a className="instagram soc-media-link" href={socialMedia.instagram}><span className="label">Instagram</span></a> : <div>No Instagram listed for this contact.</div>}
        <div className="notes" aria-label="notes">
           <span className="label">Notes: </span>
           {notes}

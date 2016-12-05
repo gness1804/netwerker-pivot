@@ -48181,7 +48181,7 @@
 	          ) : _react2.default.createElement(
 	            'div',
 	            null,
-	            'No Facebook listed for this contct.'
+	            'No Facebook listed for this contact.'
 	          ),
 	          socialMedia.twitter ? _react2.default.createElement(
 	            'a',
@@ -48194,7 +48194,7 @@
 	          ) : _react2.default.createElement(
 	            'div',
 	            null,
-	            'No Twitter listed for this contct.'
+	            'No Twitter listed for this contact.'
 	          ),
 	          socialMedia.linkedIn ? _react2.default.createElement(
 	            'a',
@@ -48207,7 +48207,7 @@
 	          ) : _react2.default.createElement(
 	            'div',
 	            null,
-	            'No LinkedIn listed for this contct.'
+	            'No LinkedIn listed for this contact.'
 	          ),
 	          socialMedia.github ? _react2.default.createElement(
 	            'a',
@@ -48220,7 +48220,7 @@
 	          ) : _react2.default.createElement(
 	            'div',
 	            null,
-	            'No Github listed for this contct.'
+	            'No Github listed for this contact.'
 	          ),
 	          socialMedia.instagram ? _react2.default.createElement(
 	            'a',
@@ -48233,7 +48233,7 @@
 	          ) : _react2.default.createElement(
 	            'div',
 	            null,
-	            'No Instagram listed for this contct.'
+	            'No Instagram listed for this contact.'
 	          ),
 	          _react2.default.createElement(
 	            'div',
