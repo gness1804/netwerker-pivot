@@ -51,8 +51,8 @@ export default class ContactCard extends Component {
     }
   }
   render() {
-    const { firstName, lastName, companyName, title, city, website, numbers, emails,
-          socialMedia, notes, followup, groups,
+    const { firstName, lastName, companyName, title, city, website, category, numbers, emails,
+          socialMedia, notes, followup,
         } = this.props;
     let display;
     let expandButtonClass;
@@ -80,6 +80,10 @@ export default class ContactCard extends Component {
           <span className="label">City: </span>
           {city}
         </div>
+        <div className="category" aria-label="category">
+          <span className="label">Category: </span>
+          {category}
+        </div>
         <div className = "cell" aria-label="cell">
           <span className="label">Cell Number: </span>
           {numbers.cell}
@@ -104,7 +108,6 @@ export default class ContactCard extends Component {
         {socialMedia.twitter ? <a className="twitter soc-media-link" href={socialMedia.twitter}><span className="label">Twitter</span></a> : <div>No Twitter listed for this contact.</div>}
         {socialMedia.linkedIn? <a className="linkedIn soc-media-link" href={socialMedia.linkedIn}><span className="label">LinkedIn</span></a> : <div>No LinkedIn listed for this contact.</div>}
         {socialMedia.github ? <a className="github soc-media-link" href={socialMedia.github}><span className="label">Github</span></a> : <div>No Github listed for this contact.</div>}
-        {socialMedia.instagram ? <a className="instagram soc-media-link" href={socialMedia.instagram}><span className="label">Instagram</span></a> : <div>No Instagram listed for this contact.</div>}
        <div className="notes" aria-label="notes">
           <span className="label">Notes: </span>
           {notes}
