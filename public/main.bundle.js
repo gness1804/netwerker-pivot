@@ -48300,14 +48300,14 @@
 	          'div',
 	          { className: 'contact-card-top-buttons-container' },
 	          followup ? _react2.default.createElement('img', {
-	            src: '../images/empty-checkbox.svg',
+	            src: '../images/checked-checkbox.svg',
 	            alt: 'An empty checkbox',
 	            className: 'flagged-for-followup-button',
 	            onClick: function onClick() {
 	              return _this2.toggleFollowup();
 	            }
 	          }) : _react2.default.createElement('img', {
-	            src: '../images/checked-checkbox.svg',
+	            src: '../images/empty-checkbox.svg',
 	            alt: 'A checked checkbox.',
 	            className: 'not-flagged-for-followup-button',
 	            onClick: function onClick() {
