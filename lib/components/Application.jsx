@@ -80,6 +80,21 @@ class Application extends Component {
     let pageDisplay;
     let addNewContactClass;
     let addNewContactClassHover;
+    let embedClass;
+    let spreadsheetLinkClass;
+
+    if (user) {
+      if (user.email === "gnessler@umich.edu" || user.email === "graham.nessler@gmail.com"){
+        embedClass = 'spreadsheet-embed';
+        spreadsheetLinkClass = 'spreadsheet-link';
+      } else {
+        embedClass = 'isHidden';
+        spreadsheetLinkClass = 'isHidden';
+      }
+    } else {
+      embedClass = 'isHidden';
+      spreadsheetLinkClass = 'isHidden';
+    }
 
     if (this.state.showAddForm) {
       addNewContactClass = "add-contact-img add-button-exit"
@@ -158,6 +173,10 @@ class Application extends Component {
         <main className = "contact-Container">
           {pageDisplay}
         </main>
+        <a className={spreadsheetLinkClass} href="https://docs.google.com/spreadsheets/d/1VHtq8YME-njcuoduffFo90G8BuQfOsWuIxuGGTS2EOk/edit#gid=0" target="blank">
+          Link to Jobs Spreadsheet
+        </a>
+        <iframe className={embedClass} src="https://docs.google.com/spreadsheets/d/1VHtq8YME-njcuoduffFo90G8BuQfOsWuIxuGGTS2EOk/pubhtml?widget=true&amp;headers=false"></iframe>
       </div>
     );
   }

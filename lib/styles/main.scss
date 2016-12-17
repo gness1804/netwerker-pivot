@@ -42,7 +42,7 @@ h1 {
     }
 }
 
-.follow-up-label{
+.follow-up-label {
   display: flex;
   align-items: center;
   position: absolute;
@@ -56,6 +56,34 @@ h1 {
   font-size: 25px;
   margin: auto;
   margin-bottom: 15px;
+}
+
+.spreadsheet-embed {
+  display: block;
+  height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  width: 90vw;
+}
+
+.spreadsheet-link {
+  color: #1b689b;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  text-decoration: none;
+
+  &:hover {
+    font-style: italic;
+  }
+
+  &:visited {
+    color: #88BBD6;
+  }
+}
+
+.isHidden {
+  display: none;
 }
 
 @import "mobile.scss";
